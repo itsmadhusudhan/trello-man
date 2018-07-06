@@ -1,0 +1,8 @@
+.list__container{
+  padding: spacing(6);
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  white-space: nowrap;
+  user-select: none;
+}

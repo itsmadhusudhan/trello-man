@@ -1,1 +1,1 @@
-export { default } from "./BoardContainer.jsx";
+export {default} from './BoardContainer.jsx';

@@ -1,0 +1,9 @@
+.board__link {
+  display: block;
+  height: 100px;
+  width: 180px;
+  background: $primary;
+  box-shadow: 1px 2px 1px 0 rgba(0, 0, 0, 0.2);
+  margin:spacing(4);
+  border-radius: 5px;
+}

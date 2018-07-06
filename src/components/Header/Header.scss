@@ -1,11 +1,19 @@
 .header{
   display: flex;
-  height: 54px;
+  height: 32px;
+  padding: 25px;
   color:$primary;
   background:$blue;
   align-items: center;
+  position:fixed;
+  top:0;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
 }
 
 .header__title{
-  font-size: 28px;
+  font-size: 20px;
+  line-height: 20px;
+  padding-left: spacing(4);
 }
