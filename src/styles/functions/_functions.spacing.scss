@@ -1,0 +1,5 @@
+$spacing-unit:4px;
+
+@function spacing($index) {
+  @return round($spacing-unit * $index);
+}

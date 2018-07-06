@@ -1,0 +1,11 @@
+.header{
+  display: flex;
+  height: 54px;
+  color:$primary;
+  background:$blue;
+  align-items: center;
+}
+
+.header__title{
+  font-size: 28px;
+}
