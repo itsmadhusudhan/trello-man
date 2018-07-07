@@ -7,13 +7,15 @@
   align-items: center;
   position:fixed;
   top:0;
-  overflow: hidden;
+  // overflow: hidden;
   width: 100%;
-  justify-content: center;
+  // justify-content: center;
+  z-index: 10;
 }
 
 .header__title{
   font-size: 20px;
   line-height: 20px;
   padding-left: spacing(4);
+  cursor: pointer;
 }
