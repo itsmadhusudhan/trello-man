@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import BoardLink from '../BoardLink';
-import * as styles from './BoardSidebar.scss';
+import * as styles from './Sidebar.scss';
 
 const BoardSidebar = ({ boards, active }) => {
   return (

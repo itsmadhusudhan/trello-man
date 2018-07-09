@@ -1,12 +1,15 @@
-import React from 'react';
-import * as styles from './BoardButton.scss';
+import React from "react";
+import * as styles from "./BoardButton.scss";
 
-const BoardButton = ({ icon, title, showAction }) => {
-  return (
-    <div className={styles.board__button} onClick={() => showAction()}>
-      {title}
-    </div>
-  );
-};
+class BoardButton extends React.Component {
+  render() {
+     const { icon, title, showAction }=this.props;
+    return (
+      <div className={styles.board__button} onClick={(e) => showAction(e)}>
+        {title}
+      </div>
+    );
+  }
+}
 
 export default BoardButton;
