@@ -1,21 +1,30 @@
-.header{
+.header {
   display: flex;
   height: 32px;
   padding: 25px;
-  color:$primary;
-  background:$blue;
+  color: $primary;
+  background: $blue;
   align-items: center;
-  position:fixed;
-  top:0;
+  position: fixed;
+  top: 0;
   // overflow: hidden;
   width: 100%;
   // justify-content: center;
   z-index: 10;
 }
 
-.header__title{
+.header__title {
   font-size: 20px;
   line-height: 20px;
   padding-left: spacing(4);
   cursor: pointer;
+  a {
+    color: $white;
+  }
+}
+
+.header__navigation {
+  margin-left: auto;
+  margin-right: 100px;
+  position: relative;
 }
