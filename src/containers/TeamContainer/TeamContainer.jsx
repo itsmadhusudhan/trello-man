@@ -22,4 +22,9 @@ const mapStateToProps = (state, props) => {
   };
 };
 
+TeamContainer.propTypes={
+  boards:PropTypes.array,
+  teams:PropTypes.array
+}
+
 export default connect(mapStateToProps)(TeamContainer);

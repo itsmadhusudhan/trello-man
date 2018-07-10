@@ -31,7 +31,7 @@ class Header extends React.Component {
     ) {
       document.body.addEventListener("click", this.hideSidebar);
     }
-    
+
   }
 
   hideSidebar = e => {
@@ -56,6 +56,11 @@ class Header extends React.Component {
     }));
   };
 
+  openCreateBoardModal=(e)=>{
+    // e.preventDefault();
+    console.log("opening modal!!")
+  }
+
   render() {
     return (
       <header className={styles.header}>
@@ -74,11 +79,9 @@ class Header extends React.Component {
             showAction={this.showCreateSidebar}
             ref={this.createBtnRef}
           />
-          <CreateSidebar active={this.state.createSidebarActive} />
+          <CreateSidebar active={this.state.createSidebarActive} openCreateBoardModal={this.openCreateBoardModal} />
         </nav>
-        {
-          // console.log(this.state)
-        }
+        <a href="" onClick={this.openCreateBoardModal}>modal</a>
       </header>
     );
   }

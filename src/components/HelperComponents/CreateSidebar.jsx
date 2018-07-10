@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import ActionLink from './ActionLink.jsx';
 import * as styles from './Sidebar.scss';
 
-const CreateSidebar = ({ active }) => {
+const CreateSidebar = ({ active,openCreateBoardModal }) => {
   return (
     <Fragment>
       {active && (
@@ -12,7 +12,8 @@ const CreateSidebar = ({ active }) => {
           <ActionLink
             title="Create Board"
             description="A board is made up of cards ordered on lists. Use it to manage projects, track information, or organize anything."
-          />
+            onClick={openCreateBoardModal}
+            />
           <ActionLink
             title="Create Team"
             description="A team is a group of boards and people. Use it to organize your company, side hustle, family, or friends."

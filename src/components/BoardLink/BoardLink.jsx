@@ -11,4 +11,8 @@ const BoardLink=({board})=>{
   )
 }
 
+BoardLink.propTypes={
+  board:PropTypes.object
+}
+
 export default BoardLink;
