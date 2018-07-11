@@ -1,0 +1,11 @@
+.modal__container{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top:100px;
+  bottom:0;
+  right:0;
+  left:-700px;
+  background: rgb(0,0,0);
+  width: 100%;
+}

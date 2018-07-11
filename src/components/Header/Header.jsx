@@ -5,36 +5,41 @@ import * as styles from "./Header.scss";
 import BoardButton from "../HelperComponents/BoardButton.jsx";
 import CreateSidebar from "../HelperComponents/CreateSidebar.jsx";
 import ReactDOM from "react-dom";
+import CreateBoardModal from "../HelperComponents/CreateBoardModal.jsx";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isSidebarActive: false,
-      createSidebarActive: false
+      createSidebarActive: false,
+      isBoardModalActive: false
     };
     this.boardBtnRef = React.createRef();
     this.createBtnRef = React.createRef();
   }
 
-  // componentDidMount(){
-  //   console.log(this.state.isSidebarActive)
-  //   this.state.isSidebarActive===true?document.body.addEventListener('click',this.showSidebar):'';
+  // componentDidMount() {
+  //   console.log(this.state.isSidebarActive);
+  //   this.state.isSidebarActive === true
+  //     ? document.body.addEventListener("click", this.hideSidebar)
+  //     : "";
   // }
 
-  componentDidUpdate(prevProps, prevState) {
-    // console.log(prevState);
-    // console.log(this.createBtnRef.current);
-    if (
-      !prevState.isSidebarActive === true ||
-      prevState.createSidebarActive === true
-    ) {
-      document.body.addEventListener("click", this.hideSidebar);
-    }
+  // componentDidUpdate(prevProps, prevState) {
+  //   // console.log(prevState);
+  //   // console.log(this.createBtnRef.current);
+  //   if (
+  //     !prevState.isSidebarActive === true ||
+  //     !prevState.createSidebarActive === true
+  //   ) {
+  //     document.body.addEventListener("click", this.hideSidebar);
+  //   }
 
-  }
+  // }
 
   hideSidebar = e => {
+    console.log(e.target);
     e.target !== ReactDOM.findDOMNode(this.boardBtnRef.current) &&
     e.target !== ReactDOM.findDOMNode(this.createBtnRef.current)
       ? this.setState(prevState => ({
@@ -56,10 +61,13 @@ class Header extends React.Component {
     }));
   };
 
-  openCreateBoardModal=(e)=>{
-    // e.preventDefault();
-    console.log("opening modal!!")
-  }
+  openCreateBoardModal = e => {
+    e.preventDefault();
+    console.log("opening modal!!");
+    this.setState(prevState => ({
+      isBoardModalActive: !prevState.isBoardModalActive
+    }));
+  };
 
   render() {
     return (
@@ -79,9 +87,16 @@ class Header extends React.Component {
             showAction={this.showCreateSidebar}
             ref={this.createBtnRef}
           />
-          <CreateSidebar active={this.state.createSidebarActive} openCreateBoardModal={this.openCreateBoardModal} />
+          <CreateSidebar
+            active={this.state.createSidebarActive}
+            openCreateBoardModal={this.openCreateBoardModal}
+            isBoardModalActive={this.state.isBoardModalActive}
+          />
+          <CreateBoardModal isBoardModalActive={this.state.isBoardModalActive}/>
         </nav>
-        <a href="" onClick={this.openCreateBoardModal}>modal</a>
+        <a href="" onClick={this.openCreateBoardModal}>
+          modal
+        </a>
       </header>
     );
   }

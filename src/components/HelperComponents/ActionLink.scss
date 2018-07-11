@@ -1,6 +1,7 @@
 .action__link {
   color: $black;
   padding: 10px 10px 5px 10px;
+  cursor:pointer;
   &:hover {
     background: $blue;
     color: $white;

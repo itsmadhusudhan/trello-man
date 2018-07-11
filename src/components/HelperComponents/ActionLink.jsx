@@ -7,6 +7,10 @@ const ActionLink = ({ title, description, openAction }) => {
   return (
     <div className={styles.action__link}  onClick={openAction}>
       {title}
+      {
+        console.log(openAction)
+      }
+
       <span className={styles.description}>{description}</span>
     </div>
   );
